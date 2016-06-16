@@ -1,5 +1,6 @@
 FROM postgres:9.4
 
+RUN apt-get update && apt-get -y dist-upgrade && rm -rf /var/lib/apt/lists/*
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
 	    locales \
